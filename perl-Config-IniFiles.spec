@@ -4,13 +4,13 @@
 #
 Name     : perl-Config-IniFiles
 Version  : 3.000000
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-3.000000.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-3.000000.tar.gz
 Summary  : 'A module for reading .ini-style configuration files.'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl GPL-2.0
-Requires: perl-Config-IniFiles-license
+Requires: perl-Config-IniFiles-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(IO::Scalar)
 
@@ -21,7 +21,7 @@ DESCRIPTION
 %package dev
 Summary: dev components for the perl-Config-IniFiles package.
 Group: Development
-Provides: perl-Config-IniFiles-devel
+Provides: perl-Config-IniFiles-devel = %{version}-%{release}
 
 %description dev
 dev components for the perl-Config-IniFiles package.
@@ -60,12 +60,12 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/perl-Config-IniFiles
-cp LICENSE %{buildroot}/usr/share/doc/perl-Config-IniFiles/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Config-IniFiles
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Config-IniFiles/LICENSE
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -74,12 +74,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/Config/IniFiles.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Config/IniFiles.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Config::IniFiles.3
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/perl-Config-IniFiles/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Config-IniFiles/LICENSE
