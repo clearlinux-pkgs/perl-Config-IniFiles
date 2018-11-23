@@ -1,2 +1,3 @@
 3.000000
 perl(IO::Scalar)
+perl(Module::Build)
