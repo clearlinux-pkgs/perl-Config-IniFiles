@@ -4,7 +4,7 @@
 #
 Name     : perl-Config-IniFiles
 Version  : 3.000002
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-3.000002.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-3.000002.tar.gz
 Summary  : A Perl module for reading .ini-style configuration files
