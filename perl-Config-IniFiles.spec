@@ -4,7 +4,7 @@
 #
 Name     : perl-Config-IniFiles
 Version  : 3.000002
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-3.000002.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-3.000002.tar.gz
 Summary  : 'A module for reading .ini-style configuration files.'
@@ -98,4 +98,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Config/IniFiles.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Config/IniFiles.pm
