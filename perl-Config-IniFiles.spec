@@ -4,10 +4,10 @@
 #
 Name     : perl-Config-IniFiles
 Version  : 3.000003
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-3.000003.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Config-IniFiles-3.000003.tar.gz
-Summary  : A Perl module for reading .ini-style configuration files
+Summary  : 'A module for reading .ini-style configuration files.'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl GPL-2.0
 Requires: perl-Config-IniFiles-license = %{version}-%{release}
@@ -23,7 +23,6 @@ DESCRIPTION
 Summary: dev components for the perl-Config-IniFiles package.
 Group: Development
 Provides: perl-Config-IniFiles-devel = %{version}-%{release}
-Requires: perl-Config-IniFiles = %{version}-%{release}
 Requires: perl-Config-IniFiles = %{version}-%{release}
 
 %description dev
@@ -98,4 +97,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/Config/IniFiles.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Config/IniFiles.pm
